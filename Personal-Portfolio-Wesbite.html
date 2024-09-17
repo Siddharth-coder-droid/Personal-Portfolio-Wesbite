@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background: #f4f4f4;
+        }
+        header {
+            background: #007bff;
+            color: #fff;
+            padding: 1em 2em;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        nav a {
+            color: #fff;
+            margin: 0 1em;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 2em 2em;
+            margin: 1em 0;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .project {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 1em;
+            margin: 1em 0;
+            background: #fafafa;
+        }
+        .project h3 {
+            margin-top: 0;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        form label {
+            margin-top: 0.5em;
+        }
+        form input, form textarea {
+            padding: 0.75em;
+            margin-top: 0.2em;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        form button {
+            margin-top: 1em;
+            padding: 0.75em;
+            background: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        form button:hover {
+            background: #0056b3;
+        }
+        .contact-info {
+            margin: 1em 0;
+            text-align: center;
+        }
+        .contact-info h3 {
+            margin-top: 0;
+        }
+        .contact-info p {
+            margin: 0.5em 0;
+        }
+        .contact-info a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 600px) {
+            header, section {
+                padding: 1em;
+            }
+            nav a {
+                display: block;
+                margin: 0.5em 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Portfolio</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <section id="contact-info">
+        <div class="contact-info">
+            <h3>Contact Information</h3>
+            <p><strong>Name:</strong> Siddharth Mondal</p>
+            <p><strong>Email:</strong> siddharth.mondal@example.com</p>
+            <p><strong>GitHub:</strong> <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">github.com/yourusername</a></p>
+            <p><strong>Phone:</strong> (123) 456-7890</p>
+        </div>
+    </section>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am a passionate web developer with a strong foundation in HTML, CSS, and JavaScript. My journey into web development started with a curiosity for how websites are built, which led me to delve into coding. I enjoy creating interactive and user-friendly web applications, and I'm always eager to learn new technologies and improve my skills.</p>
+    </section>
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Responsive Landing Page</h3>
+            <p>A modern and visually appealing landing page designed to be fully responsive across various devices. It includes sections for features, testimonials, and a call-to-action button.</p>
+        </div>
+        <div class="project">
+            <h3>Stopwatch Web App</h3>
+            <p>A functional stopwatch web application with start, stop, and reset features. It demonstrates my ability to work with JavaScript to handle time and user interactions.</p>
+        </div>
+        <div class="project">
+            <h3>Tic-Tac-Toe Web App</h3>
+            <p>An interactive Tic-Tac-Toe game built using HTML, CSS, and JavaScript. It showcases my skills in handling game logic and user interface design.</p>
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Form submitted!');
+        });
+    </script>
+</body>
+</html>
